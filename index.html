@@ -1,0 +1,58 @@
+<!doctype html>
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.7.1.js"></script>
+<script src="js/iscroll-lite.js"></script>
+<script src="js/app.js"></script>
+<script src="js/jquery.tmpl.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Parole APP</title>
+</head>
+<body>
+<header>
+    <h1>Pardons and Parole</h1>
+</header>
+<div id="wrapper">
+    <div id="main-content">
+	<div id="pages">
+    <div id="map-canvas"  class="current">
+    </div>
+    <div id="camera"  >
+		<button class="camera-control" onclick="capturePhoto();">Capture Photo</button>
+		<div style="text-align:center;margin:20px;">
+			 <img id="cameraPic" src="" style="width:auto;height:120px;"></img>
+		</div>
+	</div>
+    <div id="twitter">
+	<ul id="tweets">
+    </ul>
+    <script id="tmpl-tweets" type="text/x-jquery-tmpl">
+        <li>
+            <a class="avatar" href="#"><img src="${profile_image_url}" alt="${from_user}"></a>
+            <a href="http://twitter.com/${from_user}"><h2>${from_user}</h2></a>
+            <span class="details">${text} </span>
+        </li>
+    </script>
+    </div>
+</div>
+    </div>
+</div>
+<footer>
+<ul id="tab-bar">
+    <li>
+        <a href="#map" id="gmap">Map</a>
+    </li>
+    <li>
+        <a href="#camera">Camera</a>
+    </li>
+    <li>
+        <a href="#twitter" id="tweet">Twitter</a>
+    </li>
+</ul>
+</footer>
+</body>
+</html>
